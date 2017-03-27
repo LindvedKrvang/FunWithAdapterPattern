@@ -23,8 +23,9 @@ public class FunWithAdapterPattern {
         Robot oldRobot = new RobotAdapter(new OldLegacyRobot(), 4);
 
         oldRobot.move(1, 1, 3, 3);
-        oldRobot.talk("Good news everybody", 1);
+        oldRobot.talk("Is this real life?", 1);
 
+        System.exit(0);
     }
 
 }

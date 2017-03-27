@@ -7,6 +7,8 @@ package funwithadapterpattern.bll;
 
 import funwithadapterpattern.be.OldLegacyRobot;
 import funwithadapterpattern.be.Robot;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -41,6 +43,11 @@ public class RobotAdapter implements Robot {
             voice = "As Rasmus: ";
         }
         mOldRobot.speakBuffer = (voice + thingsToSay).toCharArray();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(RobotAdapter.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }
